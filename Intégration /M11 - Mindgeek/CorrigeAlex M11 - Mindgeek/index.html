@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+	<title>Module 11 - MindGeek</title>
+	<link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.0.13/css/all.css" integrity="sha384-DNOHZ68U8hZfKXOrtjWvjxusGo9WQnrNx2sqG0tfsghAvtVlRW3tvkXWZh58N9jp" crossorigin="anonymous">
+	<link href="https://fonts.googleapis.com/css?family=Candal|Open+Sans" rel="stylesheet">
+	<link rel="stylesheet" href="css/normalize.css">
+	<link rel="stylesheet" href="css/style.css">
+	<script
+	  src="https://code.jquery.com/jquery-3.3.1.min.js"
+	  integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8="
+	  crossorigin="anonymous"></script>
+</head>
+<body class="home">
+	<header>
+		<nav class="container">
+			<a id="logo" href="index.html" class="active"><img src="img/logo.png" alt="logo de Mindgeek" /></a>
+			<a href="mutualise.html"><i class="fas fa-users"></i>Serveur mutualisé</a>
+			<a href="dedie.html"><i class="fas fa-user"></i>Serveur dédié</a>
+			<a href="cloud.html"><i class="fas fa-cloud"></i>Serveur cloud</a>
+			<a href="contact.html"><i class="fas fa-envelope"></i>Contact</a>
+		</nav>
+		<section class="hero">
+			<h1 class="section-title">L'hébergement à prix libre</h1>
+			<p class="section-subtitle">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+			tempor incididunt ut labore et dolore magna aliqua.</p>
+		</section>
+		<section class="search-form">
+			<form class="container">
+				<input type="search" placeholder="Votre recherche ici..."/>
+			</form>
+		</section>
+		<a href="#" class="hamburger-menu"><i class="fas fa-bars"></i></a>
+	</header>
+	<main class="container">
+		<!-- BEGIN SECTION -->
+		<section class="flex-row">
+			<h2 class="section-title">Notre solution en 3 points</h2>
+			<div class="item">
+				<i class="fas fa-cogs item-icon"></i>
+				<h3 class="item-title">Configuration</h3>
+				<p class="item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+			</div>
+			<div class="item">
+				<i class="fas fa-chart-area item-icon"></i>
+				<h3 class="item-title">Monitoring</h3>
+				<p class="item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+			</div>
+			<div class="item">
+				<i class="fas fa-database item-icon"></i>
+				<h3 class="item-title">Sauvegarde</h3>
+				<p class="item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+			</div>
+		</section>
+		<!-- BEGIN SECTION -->
+		<section class="flex-row">
+			<h2 class="section-title">Choisissez votre style d'hébergement</h2>
+			<div class="item">
+				<i class="fas fa-users item-icon"></i>
+				<h3 class="item-title">Service >Mutualisé</h3>
+				<p class="item-price">19,90€ / mois </p>
+				<p class="item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+			</div>
+			<div class="item">
+				<i class="fas fa-user item-icon"></i>
+				<h3 class="item-title">Service Dédié</h3>
+				<p class="item-price">19,90€ / mois </p>
+				<p class="item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+			</div>
+			<div class="item">
+				<i class="fas fa-cloud item-icon"></i>
+				<h3 class="item-title">Service Cloud</h3>
+				<p class="item-price">19,90€ / mois </p>
+				<p class="item-text">Lorem ipsum dolor sit amet, consectetur adipisicing elit</p>
+			</div>
+		</section>
+	</main>
+	<footer>
+		<nav class="container">
+			<a href="#">Accueil</a>
+			<a href="#">Serveur mutualisé</a>
+			<a href="#">Serveur dédié</a>
+			<a href="#">Serveur cloud</a>
+			<a href="#">Contact</a>
+		</nav>
+		<small id="licence">
+		    <a rel="license" href="https://3wa.fr/propriete-materiel-pedagogique/"><img alt="Propriété de la 3W Academy" style="border-width:0" src="https://3wa.fr/wp-content/themes/3wa2015/img/logos/big.png" /></a><br /><span>Cet exercice</span> de <a href="https://3wa.fr">3W Academy</a> est mis à disposition <a rel="license" href="https://3wa.fr/propriete-materiel-pedagogique/">pour l'usage personnel des étudiants, Pas de Rediffusion - Attribution - Pas d'Utilisation Commerciale - Pas de Modification - International</a>.<br />Les autorisations au-delà du champ de cette licence peuvent être obtenues auprès de <a href="mailto:contact@3wa.fr" rel="cc:morePermissions">contact@3wa.fr</a>. Les maquettes ont été réalisées par <a href="http://www.justine-muller.fr">Justine Muller</a>.
+		</small>
+	</footer>
+</body>
+<script>
+// activation du menu responsive
+$( document ).ready(function() {
+	$(".hamburger-menu").click(function(event) {
+	    event.preventDefault();
+	    $("header nav a:not(:first-child)").toggle();
+	});
+});
+</script>
+</html>

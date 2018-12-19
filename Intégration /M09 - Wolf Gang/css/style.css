@@ -1,0 +1,243 @@
+@font-face {
+  src:url('../fonts/BodegaSans_Black.ttf');
+  font-family: 'Bodega Sans';
+}
+
+* {
+	box-sizing: border-box;
+}
+.clear
+{
+  clear:both;
+}
+.clearafter::after{
+  content:"";
+  display:block;
+  clear:both;
+}
+body{
+  background-image: url("../img/bg_body.svg");
+  background-color: #444444;
+  text-align: center;
+  color: #fff;
+}
+.container{
+  padding: 15px;
+}
+img{
+  max-width:100%;
+}
+
+span.orange{
+  color: orange;
+}
+h1,h2,h3,h4,header nav{
+  font-family: 'Bodega Sans';
+}
+h1{
+  background-color: #fff;
+  margin:0;
+  margin-bottom: 0px;
+}
+
+
+h2, h3, h4{
+  text-align : left;
+  color: #fff;
+  font-size: 2.5rem;
+  font-weight: normal;
+  line-height: 80px;
+}
+
+
+/* HEADER */
+.gradient{
+   background: linear-gradient(150deg, white 0%, white 50%, #333 50%, #333 100%);
+}
+
+
+video{
+  max-width:100%;
+
+}
+header{
+    padding:30px;
+}
+
+header nav{
+  text-align:right;
+  margin-top:10em;
+
+}
+header nav li{
+  display:block;
+}
+header nav li:nth-child(2){
+  margin:1em 0;
+}
+header  a{
+  font-size : 1.8rem;
+  font-weight: normal;
+  text-decoration: none;
+  list-style-type: none;
+  color: #fff;
+}
+
+
+/* MAIN */
+/* Ce qui concerne le corps du site */
+
+#slides-show h2{
+  text-align: center;
+}
+.flexslider .slides li{
+  border : 2px, solid, #fff;
+  list-style-type:none;
+}
+
+#articleMoto h2, #contact h2{
+  border-top: 4px solid #3e3e3e;
+  border-left: 4px solid #3e3e3e;
+  padding-left: 20px;
+}
+
+#articleMoto h3{
+  color: #ff9d00;
+  text-align: center;
+  border-bottom: 2px solid #ff9d00;
+  border-width: 70%;
+  margin-top: 0;
+}
+
+#articleMoto article{
+  background-color: #fff;
+  color: #6f6f6f;
+  padding:10px 15px;
+  margin-bottom: 15px;
+}
+#articleMoto article p{
+  line-height: 1.8em;
+}
+
+#articleMoto #knowMore{
+  background-color: #ff9d00;
+  color: #fff;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  font-size: 1.2em;
+}
+
+#contact p{
+  line-height: 1.8em;
+}
+
+#contact a{
+  display: block;
+  padding: 20px;
+}
+#contact .fab{
+  font-size: 30px;
+}
+
+
+/*FOOTER*/
+footer{
+  box-shadow: 1px 2px 5px 1px #333;
+}
+footer h4{
+  font-size: 1.5em;
+  color: #d0d0d0;
+  text-align: center;
+  margin-bottom: 20px;
+}
+footer p, footer #licence{
+  color: #d0d0d0;
+  line-height: 1.8em;
+  margin-bottom: 30px;
+}
+
+
+
+footer #navFooter{
+  color: #d0d0d0;
+}
+
+footer #navFooter a{
+  font-weight: normal;
+  list-style-type: none;
+  text-align: center;
+}
+
+footer #navFooter a{
+  color: #d0d0d0;
+  display: inline;
+  margin:0 auto;
+  line-height: 2em;
+}
+
+footer img{
+  margin-top:15px;
+  margin-bottom: 10px;
+  height: 60px;
+}
+
+footer p a{
+  color: #d0d0d0;
+}
+
+@media screen and (min-width: 768px){
+.container
+{
+  padding:30px;
+}
+header  h1{
+    display: block;
+    float: left;
+  }
+  header nav{
+    float:right;
+    margin-top:0;
+  }
+  .gradient{
+     background: linear-gradient(130deg, white 0%, white 50%, #333 50%, #333 100%);
+  }
+
+  #articleMoto{
+    margin: 30px;
+  }
+
+  #contact a{
+    display: inline;
+    padding: 20px;
+  }
+  #contact .fab{
+    font-size: 30px;
+    margin-top:20px;
+  }
+
+  footer{
+    box-shadow: 1px 2px 5px 1px #333;
+  }
+@media screen and (min-width: 1024px){
+.col-one-half
+{
+  max-width:50%;
+  float:left;
+  padding:15px;
+}
+  .col-one-quarter{
+    display: block;
+    float: left;
+    width:calc( (100% / 4) - 1em);
+    margin: .5em;
+  }
+
+ #contact .clear{
+  clear: both;
+}
+  .container
+  {
+    max-width:1300px;
+    margin:0 auto;
+  }
+}

@@ -1,0 +1,35 @@
+
+body{
+  font-family: 'Roboto Mono', monospace;
+}
+
+h1{
+  color:red;
+  text-align: center;
+}
+
+legend{
+  text-align: center;
+}
+
+.red{
+  color: red;
+}
+
+.green{
+  color:green;
+}
+li{
+  list-style-type: none;
+}
+
+p{
+  display: none;
+}
+li:hover p{
+  display: block;
+}
+
+input:checked{
+ color:yellow
+}

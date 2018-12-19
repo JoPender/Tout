@@ -1,0 +1,232 @@
+*{
+	box-sizing:border-box;
+}
+body{
+	font-family: playfair Display;
+	font-size:1em;
+	text-align: left;
+	color:#ffffff;
+	line-height: 1.5em;
+}
+.container{
+	max-width: 1000px;
+	margin:0 auto;
+}
+header h1, nav a{
+	font-family: Kaushan Script;
+	font-weight: normal;
+	color:#fff;
+}
+header{
+	background-position: center center;
+	background-image: url("../img/fond.jpg");
+	background-size: cover;
+	text-align: center;
+}
+header nav
+{
+	background-color: rgba(255,255,255,0.2);
+	padding:15px 0;
+}
+header nav a{
+	display: inline-block;
+	padding-left: 50px;
+	text-decoration: none;
+	font-size: 1.5em;
+}
+header nav a i.fas,nav a i.far{
+	display: block;
+}
+header h1{
+	font-size: 2em;
+	margin:0 auto;
+	padding:200px 0 260px;
+	text-shadow: 2px 2px 10px rgba(0,0,0,0.5);
+}
+header p{
+	background-color: rgba(255,255,255,0.1);
+	padding:10px;
+	margin:0;
+}
+
+main section{
+	display: block;
+	color: #3d4753;
+
+}
+.alignleft{
+	float: left;
+	width: 200px;
+	margin-right: 15px;
+}
+.alignright{
+	float: right;
+	width: 200px;
+	margin-left: 15px;
+}
+
+.article1:after{
+	content:" ";
+	display: block;
+	width: 90%;
+	height: 1px;
+	background-color: #dccedd;
+	margin: 0px auto;
+}
+
+.clear{
+	clear: both;
+}
+
+.imgronde{
+	display: block;
+	width: 150px;
+	margin:0 auto;
+	padding: 10px;
+}
+
+#actu h2 {
+	font-family: Kaushan Script;
+	text-align: center;
+}
+
+#a-propos{
+	background-image: url("../img/background_section.jpg");
+	background-size: cover;
+	color: #ffffff;
+}
+
+#a-propos article{
+	display: inline-block;
+	width: calc(100%/3);
+	padding: 15px;
+	text-align: center;
+}
+#a-propos{
+	padding-top: 30px;
+	padding-bottom: 15px;
+}
+
+#a-propos h2{
+		font-family: Kaushan Script;
+		font-weight: normal;
+}
+
+footer {
+	background-image: url("../img/background_section.jpg");
+	background-size: cover;
+}
+.licence a {
+	color: #ffffff;
+	text-decoration: underline;
+}
+
+.licence {
+	background-color: #8B76D2;
+	padding: 10px;
+	color: white;
+	font-size: 0.8em;
+	text-align: center;
+}
+
+.licence img {
+    width: 50px;
+}
+
+/*PAGE CONTACT*/
+#info table, #reservation{
+	width: 90%;
+	margin:0 auto;
+	text-align: center;
+}
+caption{
+	font-family: Play Display;
+	margin-top:50px;
+	margin-bottom: 30px;
+	font-size: 2em;
+	color: #394963;
+}
+table{
+	border-collapse: collapse;
+}
+
+tbody th, tbody td {
+	border: 1px solid #cacaca;
+	text-align: left;
+	padding: 10px;
+}
+tr{
+	padding: 10px;
+}
+tr:nth-child(even){
+	background-color: #f2f2f2;
+}
+
+tr:nth-child(odd){
+	background-color: #fafafa;
+}
+
+tr td:last-child{
+	color:#8d55c2;
+}
+.center{
+	text-align: center;
+}
+#info th{
+	background-color: #c4a5de;
+	text-align: left;
+	padding: 10px 0px 10px 20px;
+	color: #fff;
+	font-size: 1.6em;
+	font-family: Kaushan Script;
+	font-weight: normal;
+}
+
+#info #paris{
+	margin-bottom: 20px;
+}
+
+#reservation h2{
+	font-family: Play Display;
+	font-weight: normal;
+}
+
+fieldset{
+	margin-bottom: 30px;
+	border:1px solid #dddddd;
+	padding-bottom: 30px;
+	font-size: 1em;
+
+}
+
+fieldset legend{
+	margin-bottom: 20px;
+	padding:0 10px;
+	font-size:1.3em;
+}
+
+input[type=text], input[type=email]{
+border:0;
+border-bottom: 1px solid #dddddd;
+}
+
+
+
+fieldset input:not(:last-child) {
+	margin-right: 30px;
+}
+
+select{
+	width: 90%;
+	background-color: #fff;
+}
+
+#envoyer{
+	background-color: #8c59be;
+	color: #fff;
+	padding: 10px 20px;
+	margin: 10px;
+	border:none;
+}
+
+

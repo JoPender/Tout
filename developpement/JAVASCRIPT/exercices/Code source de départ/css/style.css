@@ -1,0 +1,41 @@
+/*GLOBAL */
+* {
+	-webkit-box-sizing: border-box;
+    box-sizing: border-box;
+	outline: none;
+}
+h1{
+	text-align: center;
+}
+
+main{
+		width: 800px
+}
+ul{
+	list-style-type: none;
+	display: flex;
+	flex-direction: row;
+	flex-wrap: wrap;
+}
+#total{
+	color: red;
+	font-weight: bold;
+}
+img{
+		margin: 1em;
+		padding:0.5em;
+}
+
+.bgSilver{
+	background-color: #C0C0C0;
+	margin: 1em;
+}
+
+.bgForestgreen{
+	background-color: #228b22;
+}
+
+.totalPhotos{
+	color: red;
+	font-weight: bold;
+}

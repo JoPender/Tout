@@ -1,0 +1,15 @@
+body{
+	text-align: center;
+}
+
+main{
+	
+	max-width: 50%;
+	border: 3px solid pink;
+	background-color: pink;
+	margin: 0 auto;
+}
+.chifoumi{
+	display: block;
+	border : 1px dashed red;
+}

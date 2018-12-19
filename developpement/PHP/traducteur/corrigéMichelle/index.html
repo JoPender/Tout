@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+ <meta charset="utf-8">
+ <title>Traducteur Anglais-Français</title>
+
+</head>
+<body>
+ <header>
+   <h1>Traducteur Anglais-Français</h1>
+ </header>
+ <main>
+   <form action ="translate.php" method="post">
+     <input type="text" name="nom">
+     <select name="langue">
+       <option value="en">fr-eng</option>
+       <option value="fr">eng-fr</option>
+     </select>
+     <input type="Submit" value="Envoyer">
+   </form>
+   <section id="traduction">
+     <?php  if(isset($result)) { echo $result; } ?>
+   </section>
+ </main>
+</body>
+</html>

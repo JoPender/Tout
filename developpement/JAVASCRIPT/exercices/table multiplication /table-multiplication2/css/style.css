@@ -1,0 +1,25 @@
+main{
+	width: 50%;
+	margin: 0 auto;
+	text-align: center;
+	font-
+}
+
+h1{
+	color: red;
+}
+table{
+	margin: 0 auto;
+}
+
+tr:first-child, td:first-child{
+	background-color: green
+}
+
+.red{
+	background-color: red;
+}
+
+.white{
+	background-color: white;
+}

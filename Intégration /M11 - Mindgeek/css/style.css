@@ -1,0 +1,326 @@
+/*GLOBAL */
+* {
+	-webkit-box-sizing: border-box;
+    box-sizing: border-box;
+	outline: none;
+}
+
+body{
+	font-family: "open Sans";
+	color: #70656d;
+	text-align: center;
+}
+
+h1, h2, h3{
+	font-family: "Candal";
+}
+
+h1 {
+	font-size:3em;
+}
+
+p{
+	font-size: 1em;
+}
+
+main h2{
+	font-size:1.8em;
+	color: #fff;
+	font-weight: normal;
+}
+
+main h3{
+	font-size: 1.8em;
+	color: #104152;
+}
+
+main article a{
+	color:#fb8b9b;
+
+}
+
+.fas{
+	color: #fb8b9b;
+	font-size: 2em;
+}
+
+.container{
+	width: 80%;
+}
+.bold{
+	font-weight: bold;
+}
+
+/*HEADER*/
+header{
+	position:relative;
+}
+
+header nav p{
+	color:#1d434e;
+	margin-top:0.8em;
+	margin-bottom: 2em;
+	font-family: "Candal"
+}
+
+#menu nav a {
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+}
+
+#
+nav .active .fas {
+	color: #203f53;  /*bleu*/
+}
+
+nav .active p {
+	color: #fb8b9b;  /*rose*/
+}
+
+menu nav a:not(:first-child){
+		display: none;
+}
+
+.hamburger{
+	position: absolute;
+	display: inline-block;
+	top:1em;
+	right: 1em;
+}
+/********************PAGE ACCUEIL*********************/
+/*MAIN*/
+
+/*SECTION BIENVENUE*/
+#bienvenue{
+	background-image: url(../img/background.jpg);
+	background-position: center;
+	color: #fff;
+	padding: 2em;
+	font-weight: bold;
+	font-size:1.2em;
+}
+
+/*FORM*/
+
+form input{
+	width: 100%;
+	background-color: #fb8b9b;
+	border:none;
+	padding: 1.5em;
+}
+
+form input::placeholder{
+	color: #f6cfd0; 
+	font-size: 1.5em;
+
+}
+
+
+/*SECTIONS OPTIONS*/
+
+
+#options h3, #cadre h3{
+	border-top: 1px dashed #516765;
+	border-left: 1px dashed #516765;
+	border-right: 1px dashed #516765;
+	margin-top: 3em;
+	padding: 1em 2px;
+}
+
+#options article a{
+	display: flex;
+	justify-content: center;
+	flex-direction: column;
+	padding-top: 2em;
+}
+
+#options article a p{
+	text-align: center;
+	font-family: "Candal"
+	font-size:2em;
+	font-weight: bold;
+}
+
+#options article a i{
+	font-size:3em;
+}
+
+#options p{ 
+	text-align: left;
+}
+
+ .pink{
+	text-align: center;
+	color: #fb8b9b;
+	font-size: 1em;
+}
+
+.bold{
+	font-weight: bold;
+}
+
+/*FOOTER*/
+
+footer{
+	background-color : #213e4e;
+	margin-top: 3em;
+}
+
+footer div{
+	padding: 2em 0;
+}
+
+
+footer p, footer a{
+	color: #fff;
+	font-family: "Candal";
+	font-weight: normal;
+}
+
+
+footer nav{
+	padding: 2em;
+	display: flex;
+	justify-content: space-between;
+}
+
+footer #licence{
+	font-size:0.7em;
+	font-family: "Open Sans";
+}
+
+footer nav {
+	display: flex;
+	justify-content: space-around;
+	flex-direction: column;
+}
+
+
+footer #licence img{
+	height: 3em;
+}
+
+
+/********************PAGE CONTACT*********************/
+
+
+#contact p{
+	color:#636268;
+}
+
+#contact p:first-child{
+	font-weight: bold;
+}
+
+
+iframe{
+	margin-top: 1em;
+}
+
+
+/********************PAGES*********************/
+#cadre .alleft{
+	text-align: left;
+	margin-bottom: 3em;
+}
+
+.cadre{
+	border:1px dashed #516765;
+	margin: 3em 0em;
+}
+
+#cadre div{
+	margin-top: 2em;
+	margin-bottom: 2em;
+}
+
+h4{
+	background-color: #213e4e;
+	color: #fff;
+	margin: 1.5em 0.5em;
+	padding: 1em;
+	font-family: "Candal"
+}
+
+.cadre .rent{
+	text-align: center;
+	font-family: "Candal";
+	margin: 2em;
+}
+
+#cadre .commander{
+	background-color: #fb8b9b;
+	color: #fff;
+	margin: 0.5em;
+	padding: 0.5em;
+	font-family: "Candal";
+	text-align: center;
+}
+
+
+#cadre ul{
+	text-align: left;
+	margin: 2em;
+	list-style-type: circle;
+	line-height: 2.5em;
+}
+
+
+
+/*********************media screen and (min-width: 1024)*/
+@media screen and (min-width: 1024px){
+	
+	.container{
+		width: 80%;
+	}
+
+	#bienvenue{
+		padding: 8em;
+	}
+
+
+
+
+/**********MENU************/
+
+	#menu nav {
+		display: flex;
+		justify-content: space-around;
+		flex-direction: row;
+		align-items: center;
+
+	}
+
+	.hamburger{
+		display: none;
+	}
+
+	nav a:not(:first-child){
+		display: block !important;
+	}
+
+
+/**********PAGES************/
+
+	#options div {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		padding-left: 1em;
+	}
+
+	#cadre div{
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		flex-wrap: wrap;
+		align-items: flex-start;
+
+	}
+
+	#cadre div article{
+		flex-basis: calc(100%/3 - 1em);
+	}
+
+}

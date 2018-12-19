@@ -1,0 +1,49 @@
+
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+  <meta charset="utf-8">
+  <title>TO DO LIST</title>
+  <link rel="stylesheet" href="css/normalize.min.css">
+  <link rel="stylesheet" href="css/font-awesome.min.css">
+  <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+  <link rel="stylesheet" href="css/style.css"
+  <link href="https://fonts.googleapis.com/css?family=Roboto+Mono" rel="stylesheet">
+
+
+</head>
+<body>
+  <header>
+    <h1>MA TODOLIST :)</h1>
+  </header>
+  <main>
+<!-- FORM TODOLIST -->
+    <form  action="todolist.php" method="post">
+      <fieldset>
+        <legend>To do list</legend>
+        <ul>
+      <?php foreach ($taskItems as $key => $li) echo $li ?>
+        </ul>
+        <button type="submit" class="delete">Supprimer</button>
+      </fieldset>
+    </form>
+<!-- FORM DESCRIPTION NOUVELLES TACHES -->
+    <form  action="addtodolist.php" method="post">
+      <fieldset>
+          <legend>Nouvelle tâche</legend>
+          <label for="todo">Titre</label>
+          <input type="text" name="titre" id="todo">
+          <label for="description">Description</label>
+          <textarea name="description" id="description" rows="8" cols="80"></textarea>
+          <input type="date" name="date">
+          <label>Priorité de la tâche :
+          <input type="radio" name="priority" value="priority-high">haute
+          <input type="radio" name="priority" value="priority-normal">normal
+          <input type="radio" name="priority" value="priority-low">basse
+          </label>
+      </fieldset>
+      <button type="submit" class="register">Enregistrer</button>
+    </form>
+  </main>
+</body>
+</html>

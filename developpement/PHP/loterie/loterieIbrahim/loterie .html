@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="utf-8">
+    <title>Loterie</title>
+  </head>
+  <body>
+    <header>
+      <h1 style="text-align: center; color: red;">Loterie</h1>
+    </header>
+    <main>
+      <p id="lot_numbers" style="text-align: center;">
+        <!-- On appelle la fonction définit sur le fichier php en lui donnant
+        comme paramètres 1 et 49 pour qu'elle puisse générer des nombres dans
+        cet intervale.
+        On utilise la fonction "implode" pour extraire chaque objet du tableau
+        et les afficher en les séparant par un ' - '. -->
+        <?= implode(' - ', loterie(1, 49)); ?>
+      </p>
+    </main>
+  </body>
+</html>

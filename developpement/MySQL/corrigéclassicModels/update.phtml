@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <form class="" action="update.php" method="post">
+      <input type="hidden" name="productCode" value="<?= $model['productCode'] ?>">
+      <table>
+        <tr>
+          <td><label for="productName">Nom de la maquette</label></td>
+          <td><input type="text"  name="productName" value="<?= $model['productName'] ?>" /></td>
+        </tr>
+        <tr>
+          <td><label for="productLine">Type de maquette</label></td>
+          <td><select class="" name="productLine">
+            <?php foreach($categories as $c) {
+              $selected = ($c['productLine'] == $model['productLine']) ? "selected" : "";
+              echo "<option value='" . $c['productLine'] . "' $selected >" . $c['productLine'] . "</option>";
+            } ?>
+          </select></td>
+        </tr>
+        <tr>
+          <td><label for="productScale">Echelle de la maquette</label></td>
+          <td><input type="text" name="productScale" value="<?= $model['productScale'] ?>" /></td>
+        </tr>
+        <tr>
+          <td><label for="productVendor">Fournisseur de la maquette</label></td>
+          <td><input type="text" name="productVendor" value="<?= $model['productVendor'] ?>" /></td>
+        </tr>
+        <tr>
+          <td><label for="productDescription">Nom de la maquette</label></td>
+          <td><textarea name="productDescription"><?= $model['productDescription'] ?></textarea></td>
+        </tr>
+        <tr>
+          <td><label for="quantityInStock">Quantité en stock</label></td>
+          <td><input type="text" name="quantityInStock" value="<?= $model['quantityInStock'] ?>" /></td>
+        </tr>
+        <tr>
+          <td><label for="buyPrice">Prix d'achat</label></td>
+          <td><input type="text" name="buyPrice" value="<?= $model['buyPrice'] ?>" /></td>
+        </tr>
+        <tr>
+          <td><label for="MSRP">Prix de vente conseillé</label></td>
+          <td><input type="text" name="MSRP" value="<?= $model['MSRP'] ?>" /></td>
+        </tr>
+        <tr>
+          <td></td>
+          <td><input type="submit" name="" value="Modifier"></td>
+        </tr>
+
+      </table>
+    </form>
+  </body>
+</html>

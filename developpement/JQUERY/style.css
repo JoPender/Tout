@@ -1,0 +1,32 @@
+header,main{
+  width: 50%;
+  text-align: center;
+  line-height: 2.5em;
+  font-family:'Poppins', sans-serif;
+}
+h1{
+  color: #EB203B;
+}
+label{
+  display: block;
+}
+.fas{
+  font-size: 2.5em;
+  color: grey;
+}
+
+.fas:hover{
+color: #EB203B;
+}
+
+.pink{
+  background-color: #EB203B;
+  border-color: #EB203B;
+  color: #fff;
+  padding: 5px 10px;
+  border-radius: 10%;
+}
+
+.hide{
+  display: none;
+}

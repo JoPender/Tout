@@ -1,0 +1,160 @@
+*{
+	box-sizing:border-box;
+}
+body{
+	background-image: url("../img/fond.png");
+	color: #444a54;
+	font-family: "open sans";
+	font: 1em;
+	text-align: justify;
+	line-height: 1.5;
+}
+h1, h2, h3, h4{
+		font-family: "Slabo 27px";
+		font-weight: normal;
+}
+.darkblue{
+	color: #2b9aa0;
+}
+.lightblue{
+	color: #9dd5d3;
+}
+.imgronde{
+	display: block;
+	float: left;
+	border-radius: 50%;
+}
+
+header{
+	background-color: #34b1b2;
+	border-top: 4px solid #2b9aa0;
+	border-bottom: 4px solid #2b9aa0;
+	text-align: center;
+	padding-top: 0px;
+	margin-top:100px;
+}
+header h1{
+	margin-top: 0px;
+}
+header nav{
+	padding-bottom: 25px;
+}
+header nav a{
+	color:#ffffff;
+	padding: 25px;
+	text-decoration:none;
+	font-family: "Slabo 27px";
+}
+
+main, footer{
+	min-width: 800px;
+	max-width: 1100px;
+	margin:0 auto;
+}
+
+#intro{
+	text-align: center;
+	padding: 30px 17%;
+}
+section h2{
+	margin-bottom: 0px;
+}
+
+.welcome{
+	font-size: 2.5em;
+}
+.today{
+	font-size: 3.5em;
+	margin-top: 30px;
+}
+.space{
+	margin:12px;
+}
+main p{
+	padding-top: 15px;
+}
+h3{
+	font-size: 1.8em;
+	font-weight: normal;
+}
+#recipe1, #recipe2{
+	padding:0px 20px 0px 20px;
+}
+#recipes{
+	display: inline-block;
+	width:68%;
+	background-color: #b6dedc;
+	margin-right: 2%;
+	padding-bottom: 50px;
+}
+
+#recipes h2, #recipes h3{
+	text-align: center;
+}
+
+#recipes article{
+	display: block;
+	float: left;
+	width:50%;
+}
+
+.readmore{
+	display: inline-block;
+	float: right;
+	background-color: #2b9aa0;
+	color: #ffffff;
+	text-decoration:none;
+	padding-right: 10px;
+	padding:10px 10px 10px 10px;
+	font-family: "Slabo 27px";
+}
+.readmore i
+{
+	margin:5px;
+}
+
+aside{
+	display: inline-block;
+	vertical-align:top;
+	width: 30%;
+	background-color: #34b1b2;
+	border: 5px solid #2b9aa0;
+	padding: 15px 15px 15px 15px;
+}
+aside h2{
+	color:#ffffff;
+}
+
+.new{
+	font-size: 1.4em;
+}
+aside h4{
+	color: #b3dddb;
+	margin:0px;
+}
+aside p{
+	margin:0px;
+	padding: 0px;
+	color:#ffffff;
+	margin-bottom: 30px;
+	text-align: left;
+}
+#actu{
+	position:relative;
+}
+#imgfish{
+	position:absolute;
+	top:-50px;
+	right: -50px;
+}
+footer{
+	text-align: center;
+}
+.img3wa{
+	margin-top:50px;
+	width: 50px;
+	height: 50px;
+}
+footer p{
+	margin:0px
+}

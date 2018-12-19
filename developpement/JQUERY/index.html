@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+     <!-- CSS Vendor -->
+     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+     <link rel="stylesheet" type="text/css" href="css/normalize.css" media="all" />
+     <!-- CSS Perso -->
+     <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
+     <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
+    <title>Carnet d'adresse</title>
+
+
+    <script type="text/javascript" src="main.js"></script>
+    <script type="text/javascript" src="event.js"></script>
+
+  </head>
+  <body>
+    <header>
+      <h1>Carnet d'adresse</h1>
+    </header>
+    <main>
+      <!--liste des contacts-->
+      <section id="contactList">
+        <ul id="contact">
+
+        </ul>
+      </section>
+
+      <!--Description des contacts-->
+      <section id="description">
+        <button type="submit" name="bt_edit" class="pink" id="editContact">Editer</button>
+      </section>
+
+      <!--Ajouter - Supprimer des contacts-->
+      <section>
+        <a href="#" id="addContact"><i class="fas fa-user-plus"></i></a>
+        <a href="#" id="deleteContact"><i class="fas fa-user-minus"></i></a>
+      </section>
+
+      <!--Formulaire de contact-->
+      <section class="contactForm">
+        <form class="" action="" method="">
+          <select class="" id="genre" name="genre">
+            <option value="mme">Madame</option>
+            <option value="mr">Monsieur</option>
+          </select>
+          <input type="text" value="Nom" id="lastname" name="lastname" onfocus="this.oldvalue=this.value;this.value='';" onblur="if (this.value=='') this.value=this.oldvalue;" />
+          <input type="text" value="Prénom" id="firstname" name="firstname" onfocus="this.oldvalue=this.value;this.value='';" onblur="if (this.value=='') this.value=this.oldvalue;" />
+          <input type="text" value="Tel" id="tel" name="tel" onfocus="this.oldvalue=this.value;this.value='';" onblur="if (this.value=='') this.value=this.oldvalue;" />
+          <button type="submit" name="bt_save" class="pink" id="saveContact">Enregistrer</button>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>

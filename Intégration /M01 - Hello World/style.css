@@ -1,0 +1,38 @@
+body{
+	font-family: serif;
+}
+.red{
+	color:red;
+}
+.blue{
+	color:blue;
+}
+.green{
+	color:green;
+}
+.bgred{
+	background-color: red;
+}
+.bgblue{
+	background-color: blue;
+}
+.bggreen{
+	background-color: green;
+}
+.arial{
+	font-family: arial
+}
+.monospace{
+	font-family: monospace;
+}
+span.grey{
+	color:grey;
+}
+footer{
+	text-align: center;
+	font-size:10px;
+}
+footer img{
+	max-width: 60px;
+	height:auto;
+}

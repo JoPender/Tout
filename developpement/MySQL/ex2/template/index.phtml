@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- CSS Vendor -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="css/normalize.css" media="all" />
+    <!-- CSS Perso -->
+    <link href="https://fonts.googleapis.com/css?family=Bree+Serif" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="css/style.css" media="screen" />
+    <title></title>
+  </head>
+  <body>
+    <section>
+      <h1>CLASSIC MODELS</h1>
+      <h2>Produits</h2>
+      <form class="products" action="index.php" method="post">
+            <label for="produits">
+              <span>Choisissez un type de produit : </span>
+            </label>
+            <select class="" name="choiceProductLine">
+              <option value="%cars%">Voitures</option>
+              <option value="motor">Motos</option>
+              <option value="plane">Avions</option>
+              <option value="ships">Bateaux</option>
+              <option value="%trucsbuses%">camions et bus</option>
+              <option value="train">Train</option>
+              <input type="submit" name="btn_Save">
+            </select>
+      </form>
+      <table>
+        <?php  foreach($table as $row) ?>
+   	    <tr>
+            <td><?=$row['productLine']; ?></td>
+            <td><?=$row['productName']; ?></td>
+            <td><?=$row['productDescription']; ?></td>
+        </tr>
+      </table>
+    </section>
+  <!--<section>
+    <h2>Liste des commandes</h2>
+    <a href="add.php">Ajouter une commande</a>
+    <form>
+      <table>
+          <tr>
+            <th>Numéro de commande</th>
+            <th>Date de commande</th>
+            <th>Date de livraison</th>
+            <th>Statut de la commande</th>
+          </tr>
+          <tr>
+
+            </tr>
+        </tbody>
+      </table>
+    </form>
+  </section>-->
+  </body>
+</html>

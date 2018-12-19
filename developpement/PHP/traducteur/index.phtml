@@ -1,0 +1,32 @@
+<?php include "traducteur.php";?>
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>traducteur</title>
+    <link rel="stylesheet" href="css/normalize.min.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="css/slider.css">
+
+
+    <!-- Fonctions utilitaires -->
+</head>
+<body>
+    <header>
+      <h1>Traducteur Anglais - Français</h1>
+    </header>
+    <main>
+      <form  action="traducteur.php" method="post">
+        <fieldset>
+          <legend>Saisissez votre mot</legend>
+          <input type="text" name="mot" value="">
+          <input type="radio" name="lang" value="français-anglais">français-anglais
+          <input type="radio" name="lang" value="anglais-français">anglais-français
+        </fieldset>
+        <button type="submit" class="envoyer">Traduire</button>
+      </form>
+      <?= resultat()?>
+    </main>
+</body>
+</html>

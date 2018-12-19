@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8">
+    <link type="text/css" rel="stylesheet" href="css/normalize.css">
+    <link type="text/css" rel="stylesheet" href="css/style.css">
+    <title>Traducteur Anglais - Francais</title>
+  </head>
+  <body>
+    <header>
+      <h1 style="color: red;">Traducteur Anglais - Francais</h1>
+    </header>
+    <main>
+      <form action="index.php" method="post">
+        <fieldset>
+          <input type="text" name="word" placeholder="Saisir un mot" id="inp_word" value="<?= $word;?>"/>
+          <input type="text" name="translated_area" id="trs" value="<?= translate();?>"/>
+          <button type="submit" name="translate">Traduire</button>
+          <select class="trad" name="traduction">
+            <option value="toEnglish" selected>Francais vers Anglais</option>
+            <option value="toFrench">Anglais vers Francais</option>
+          </select>
+        </fieldset>
+      </form>
+      <div>
+        <p></p>
+      </div>
+    </main>
+    <footer></footer>
+    <script type="text/javascript" src="js/script.js"></script>
+  </body>
+</html>
