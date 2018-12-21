@@ -8,6 +8,10 @@ header,main{
 h1{
   color: #EB203B;
 }
+
+section{
+  margin : 20px;
+}
 label{
   display: block;
 }
@@ -33,10 +37,12 @@ color: #EB203B;
 }
 
 
-.hide{
+.hide {
   display: none;
 }
 
+
 .display{
   display: block;
+  margin: 0 auto;
 }

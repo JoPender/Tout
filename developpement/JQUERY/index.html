@@ -11,9 +11,9 @@
      <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
     <title>Carnet d'adresse</title>
     <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
-
-    <script type="text/javascript" src="main.js"></script>
     <script type="text/javascript" src="event.js"></script>
+    <script type="text/javascript" src="main.js"></script>
+
 
   </head>
   <body>
@@ -29,7 +29,9 @@
       </section>
 
       <!--Description des contacts-->
-      <section id="description">
+      <section id="section_edit">
+        <div id="description">
+        </div>
         <button type="button" name="bt_edit" class="pink hide" id="bt_EditContact">Editer</button>
       </section>
 
@@ -40,8 +42,8 @@
       </section>
 
       <!--Formulaire de contact-->
-      <section class="contactForm">
-        <form class="" action="" method="">
+      <section id="contactForm" class="hide">
+        <form>
           <select class="" id="genre" name="genre">
             <option value="mme">Madame</option>
             <option value="mr">Monsieur</option>
