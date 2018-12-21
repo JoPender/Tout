@@ -10,7 +10,7 @@
      <link href="https://fonts.googleapis.com/css?family=Poppins" rel="stylesheet">
      <link rel="stylesheet" type="text/css" href="style.css" media="screen" />
     <title>Carnet d'adresse</title>
-
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
 
     <script type="text/javascript" src="main.js"></script>
     <script type="text/javascript" src="event.js"></script>
@@ -22,15 +22,15 @@
     </header>
     <main>
       <!--liste des contacts-->
-      <section id="contactList">
-        <ul id="contact">
+      <section>
+        <ul id="detailContact">
 
         </ul>
       </section>
 
       <!--Description des contacts-->
       <section id="description">
-        <button type="submit" name="bt_edit" class="pink" id="editContact">Editer</button>
+        <button type="button" name="bt_edit" class="pink hide" id="bt_EditContact">Editer</button>
       </section>
 
       <!--Ajouter - Supprimer des contacts-->

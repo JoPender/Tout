@@ -1,5 +1,6 @@
 header,main{
   width: 50%;
+  margin: 0 auto;
   text-align: center;
   line-height: 2.5em;
   font-family:'Poppins', sans-serif;
@@ -8,6 +9,10 @@ h1{
   color: #EB203B;
 }
 label{
+  display: block;
+}
+
+input{
   display: block;
 }
 .fas{
@@ -27,6 +32,11 @@ color: #EB203B;
   border-radius: 10%;
 }
 
+
 .hide{
   display: none;
+}
+
+.display{
+  display: block;
 }
