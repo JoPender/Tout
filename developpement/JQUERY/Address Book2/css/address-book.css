@@ -1,0 +1,114 @@
+a
+{
+    color: #00968B;
+    text-decoration: none;
+    transition: color 0.25s;
+}
+a:hover
+{
+    color: #FF6F69;
+}
+
+body
+{
+    /* structure */
+    margin: 0 auto;
+    padding: 1em;
+    min-height: 100%;
+    width: 80%;
+
+    /* presentation */
+    font-family: 'Open Sans', sans-serif;
+}
+
+html
+{
+    /* structure */
+    height: 100%;
+
+    /* presentation */
+    background-color: #F3EDD3;
+}
+
+h1
+{
+    color: #113F59;
+}
+
+hr
+{
+    border-color: #FAE8CC;
+}
+
+.hide
+{
+    display: none;
+}
+
+.menu
+{
+    /* structure */
+    padding-left: 0;
+
+    /* presentation */
+    list-style-type: none;
+}
+.menu li
+{
+    display: inline-block;
+    padding: 0.5em 0.25em;
+}
+
+.standard-form label
+{
+    /* structure */
+    display: inline-block;
+    width: 8em;
+
+    /* presentation */
+    color: #00968B;
+    text-align: right;
+}
+.standard-form ul
+{
+    /* structure */
+    padding-left: 0;
+
+    /* presentation */
+    list-style-type: none;
+}
+.standard-form ul li
+{
+    margin: 1em 0;
+}
+
+#contact-viewer {
+  display: flex;
+  justify-content: space-between;
+}
+
+.error-message {
+  color: darkviolet;
+    padding: 0.3rem;
+    border: 1px solid darkmagenta;
+    box-shadow: 4px 4px 16px -10px #460E5F;
+    border-radius: 4px;
+}
+
+/* Classes CSS pour la mise en valeur des erruers de validation des champs du formulaire */
+
+.error-block {
+  background-color: #AB1414;
+  color: white;
+  display: block;
+  font-size: 0.8rem;
+  padding: 0.5rem;
+}
+
+.hidden-error {
+  display: none;
+}
+
+input:invalid {
+  background-color: #FEE;
+}

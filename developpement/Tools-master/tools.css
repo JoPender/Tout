@@ -1,0 +1,11 @@
+#s_log {
+  display: none;
+}
+
+#check_log:checked + #s_log {
+  display: block;
+}
+
+input[type='file'] {
+  color: transparent;
+}

@@ -1,0 +1,124 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript</title>
+    <link rel="stylesheet" href="css/normalize.css">
+    <link rel="stylesheet" href="css/font-awesome.min.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+    <link rel="stylesheet" href="css/address-book.css">
+
+    <!-- Librairie jQuery -->
+    <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+    <!-- Fonctions utilitaires -->
+    <script src="js/data-layer.js"></script>
+    <!-- Fonctions du carnet d'adresses -->
+    <script src="js/address-book.js"></script>
+    <!-- Evenements du carnet d'adresses -->
+    <script src="js/events.js"></script>
+    <!-- Validation des valeurs entrées dans les champs du formulaire -->
+    <script src="js/validation.js"></script>
+    <!-- Code principal du carnet d'adresses -->
+    <script src="js/main.js"></script>
+</head>
+<body>
+    <header>
+      <h1><i class="fa fa-book"></i> Carnet d'Adresses</h1>
+      <div class="errors"></div>
+    </header>
+    <main>
+      <section id="contact-viewer">
+
+        <!-- Contenu du carnet d'adresses (liste de contacts) -->
+        <section id="address-book"></section>
+
+        <!-- Détails d'un contact particulier du carnet d'adresses -->
+        <aside id="contact-details" class="hide">
+          <h3></h3>
+          <p></p>
+          <a href="#">Editer ce contact</a>
+        </aside>
+
+        <nav>
+          <ul class="menu">
+            <li><button id="add-contact" title="Ajouter un contact"><i class="fa fa-plus"></i></button></li>
+            <li><button id="clear-address-book" title="Effacer le carnet d'adresses"><i class="fa fa-trash-o"></i></button></li>
+          </ul>
+        </nav>
+      </section>
+      <!-- Le formulaire de saisie de contact ne s'affiche pas au démarrage -->
+      <form id="contact-form" class="hide standard-form" data-mode data-index>
+        <hr>
+        <ul>
+          <li>
+            <label for="title">Civilité :</label>
+            <select id="title" name="title">
+              <option value="0">...</option>
+              <option value="1">Madame</option>
+              <option value="2">Mademoiselle</option>
+              <option value="3">Monsieur</option>
+            </select>
+          </li>
+          <li>
+            <label for="lastName">Nom :</label>
+            <!--
+            Commencer à lire à partir de la ligne 85 :o)
+
+            Le motif de l'attibut 'pattern' indique que le le champ peut contenir toutes les lettres
+            de l'aphabet français, un espace ou un tiret '-' ou une apostrophe.
+            (...)+ === le '+' après les parenthèses indique que le motif peut être présent 1 fois ou plus.
+            Ainsi 'Dupont' ou 'd'Artagnan' ou 'de Beauvoir' sont valides mais pas '@mc43'
+            ni 'de Saint_Simon'
+
+            La syntaxe est très peu lisible, car JavaScript ne permet pas de faire des énumération [a-z]
+            qui englobent toutes (et seulement) les lettres _accentuées_ (qui font encore partie des caractères
+            dits _spéciaux_)
+            -->
+            <input id="lastName" type="text" name="lastName" pattern="([a-zA-ZáàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ]+[\s\-']?)+" />
+          </li>
+          <li>
+            <label for="firstName">Prénom :</label>
+            <input id="firstName" type="text" name="firstName" pattern="([a-zA-ZáàâäãåçéèêëíìîïñóòôöõúùûüýÿæœÁÀÂÄÃÅÇÉÈÊËÍÌÎÏÑÓÒÔÖÕÚÙÛÜÝŸÆŒ]+-?)+" />
+          </li>
+          <li>
+            <label for="phone">Téléphone :</label>
+            <!--
+            L'attribut 'pattern' permet de décrire un “motif” de chaîne de caractères servant de contrainte
+            pour la validation du champ. La valur de l'&ttribut est une _expression régulière_.
+            Pour la déchiffrer :
+            \d      === un chiffre === {0-9}
+            \d{n}   === une suite de n chiffres
+            \s      === un espace
+            [\s\.]  === un espace ou un point === (\s|\.) '|' représente l'alternative
+            [\s\.]? === Le motif peut être présent 0 ou 1 fois
+            (...)   === un groupe isolant un sous-motif
+            Certains caractères doivent être protégés \( \+ \) \. pour les distinguer des éléments
+            de syntaxe des expressions régulières.
+
+            Le motif du champ 'phone' peut se lire :
+            1) Un numéro de téléphone commence par un premier groupe qui contient soit '(+33)' soit '0'
+            2) Suit un chiffre entre 1 et 5 (l'indicatif régional)
+            3) Suit un groupe composé d'un espace ou d'un point, optionnels, et de deux chiffres '.52' ou '49'
+            4) Le groupe précédent est répété 4 fois (donc 8 chiffres)
+
+            JavaScript a un support asez limité des expressions régulières
+
+            Le navigateur peut vérifier au moment de la frappe que l'information entrée correspond à
+            quelque chose que l'on attend. On peut voir ceci comme une extenstion des champs
+            spécialisés comme date, number, range, etc. (moins les widgets, naturellement).
+            On peut aussi voir cela comme un complément, plus précis à l'attribut 'required'.
+            Ou, avec certaines précuations, comme une alternative.
+            -->
+            <input id="phone" type="text" name="phone" pattern="(\(\+33\)|0)[1-5]([\s\.]?\d{2}){4}" />
+          </li>
+          <li id="phoneError" class="hiddenError"></li>
+          <li>
+            <input type="button" id="save-contact" value="Enregistrer">
+          </li>
+        </ul>
+      </form>
+    </main>
+    <footer></footer>
+</body>
+</html>

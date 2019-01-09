@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+      <meta charset="utf-8">
+      <title>JavaScript</title>
+      <link rel="stylesheet" href="css/normalize.css">
+      <link rel="stylesheet" href="css/font-awesome.min.css">
+      <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Open+Sans">
+      <link rel="stylesheet" href="css/style.css">
+      <!-- Librairie jQuery -->
+      <script src="http://code.jquery.com/jquery-2.1.4.min.js"></script>
+
+      <!-- Code principal -->
+      <script src="js/main.js"></script>
+      <script src="js/ajax.js"></script>
+      <script src="js/events.js"></script>
+
+  </head>
+  <body>
+    <head>
+      <h1>Exercice AJAX</h1>
+    </head>
+    <main>
+      <section>
+        <h2>En tête secondaire</h2>
+        <div id="resultat">
+
+        </div>
+      </section>
+      <section>
+        <form class="" action="index.html" method="get">
+          <fieldset>
+            <legend>Votre choix</legend>
+            <label for="choice">
+            <input type="radio" name="choice" id="html" value="0">Récupérer un contenu HTML du serveur
+            </label>
+            <label for="choice">
+            <input type="radio" name="choice" id="json" value="1">Récupérer un contenu JSON du serveur
+            </label>
+            <label for="choice">
+            <input type="radio" name="choice" id="film"value="2">Récupérer les films
+            </label>
+            <button type="button" id="executer" name="button">Executer</button>
+          </fieldset>
+        </form>
+      </section>
+    </main>
+  </body>
+</html>
