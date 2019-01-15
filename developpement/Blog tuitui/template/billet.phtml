@@ -4,9 +4,9 @@
 <html lang="en" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="public/css/normalize.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="public/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Signika|Thasadith" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
     <script
@@ -14,8 +14,8 @@
       integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
       crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
-    <script type="text/javascript" src="js/utilities.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="public/js/utilities.js"></script>
+    <script type="text/javascript" src="public/js/main.js"></script>
     <title>Tuitui Blog</title>
   </head>
   <body>
@@ -24,7 +24,7 @@
         <article id="billet">
           <div class="">
             <h2 class="title_article"><?= $displayBillet_result['titre']; ?></h2>
-            <img src="<?= $displayBillet_result['image'] ?>" alt="<?= $displayBillet_result['titre']; ?>">
+            <img src="public/images/voyages/<?= $displayBillet_result['image'];?>" alt="<?= $displayBillet_result['titre']; ?>">
           </div>
           <div class="billet_content">
               <div class="info_billet">

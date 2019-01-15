@@ -1,0 +1,46 @@
+
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Correction blog</title>
+  </head>
+  <body>
+
+Model View controleur (MVC)
+
+
+    Arboresence
+
+    > Administration
+      -> src
+        ->repository.php
+      -> public
+      ->templates
+          ->base.phtml
+      ->index.php
+    > src
+      -> repository
+          ->articleRepository.php
+    >public
+    >templates
+        ->base.phtml
+        ->lastArticles.phtml
+    >config.php (exemples : const NB_ARTICLES = 10 //)
+    >utilities
+    >index.php
+
+
+I-LastArticles.php (controleur qui s'assure que le contexte est bien configuré puis délègue à d'autres services)
+    1- Liste des derniers billets :
+      a- Initialiser le processus :
+        - Importer des bibliothèques
+        - Connexion à la db
+        - Créer des constantes
+        - Restaurer la session
+      b- Traitement de la requête: (modèle qui permet de sélectionner les données - donner des droits...toutes les gestions de données ex : fichier articleRepository.php)
+        - F° findLastPosts() avec $_POST
+      c- Présenter les résultats (lastArticles.phtml) (vue : fichiers qui sont rangés dans templates)
+
+  </body>
+</html>

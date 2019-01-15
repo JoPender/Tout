@@ -1,10 +1,13 @@
+<?php include 'src/repository/categorie.php'; ?>
+<?php session_start(); ?>
+
 <!DOCTYPE html>
-<html lang="en" dir="ltr">
+<html lang="fr" dir="ltr">
   <head>
     <meta charset="utf-8">
-    <link rel="stylesheet" type="text/css" href="css/normalize.css">
+    <link rel="stylesheet" type="text/css" href="public/css/normalize.css">
     <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css" integrity="sha384-B4dIYHKNBt8Bc12p+WXckhzcICo0wtJAoU8YZTY5qE0Id1GSseTk6S+L3BlXeVIU" crossorigin="anonymous">
-    <link rel="stylesheet" type="text/css" href="css/style.css">
+    <link rel="stylesheet" type="text/css" href="public/css/style.css">
     <link href="https://fonts.googleapis.com/css?family=Signika|Thasadith" rel="stylesheet">
     <link href="https://fonts.googleapis.com/css?family=Courgette" rel="stylesheet">
     <script
@@ -12,28 +15,44 @@
       integrity="sha256-2Kok7MbOyxpgUVvAk/HJ2jigOSYS2auK4Pfzbm7uH60="
       crossorigin="anonymous"></script>
     <meta name="viewport" content="width=device-width, initial-scale=1.0, shrink-to-fit=no" />
-    <script type="text/javascript" src="js/utilities.js"></script>
-    <script type="text/javascript" src="js/main.js"></script>
+    <script type="text/javascript" src="public/js/utilities.js"></script>
+    <script type="text/javascript" src="public/js/main.js"></script>
     <title>Tuitui Blog</title>
   </head>
   <body>
-    <form class="container" action="index.html" method="post">
-      <fieldset >
-        <legend><h2>Nouveau billet</h2></legend>
-        <label for="title">
-          <input type="text" name="title" id="title" placeholder="Titre" value="">
-        </label>
-        <label for="categorie"></label>
-        <select class="categorie" name="">
-          <option value="">Sélectionner un thème</option>
-          <option value="">Ile du sud</option>
-        </select>
-        <input type="date" name="" value="">
-        <textarea name="name" rows="8" cols="80"></textarea>
-        <input type="image" id="image" name="image" value="" src="">
-        <label for="save"></label>
-        <button type="button" name="button" value="send">Enregistrer</button>
-      </fieldset>
-    </form>
+    <main class="container">
+      <!--?= var_dump($_SESSION['id']); die; ?-->
+      <div id="newBillForm">
+        <form class="" action='src/repository/insertBillet.php' method="post" enctype="multipart/form-data">
+          <fieldset class="col-two-third">
+              <legend><h2>Nouveau billet</h2></legend>
+              <!--Pseudo du redacteur-->
+              <!--input type="text" name="pseudo" id="pseudo" placeholder="pseudo"-->
+              <input type="hidden" name="user" value="<?= $_SESSION['id']; ?>"/>
+
+              <!--Insertion du titre-->
+              <input type="text" name="titre" id="title" placeholder="Titre">
+
+              <!--Selection du thème de l'article-->
+              <select class="categorie" name="theme">
+                <option value="">Sélectionner un thème</option>
+                <?php foreach($displayCat_result as $t): ?>
+                  <option value="<?= $t['id']; ?>"><?= $t['nom']; ?></option>
+                <?php endforeach; ?>
+              </select>
+              <!--Sélection de la date-->
+              <input type="hidden" name="date_publication" value="<?= date('Y-m-d H:i:s'); ?>"/>
+              <!--Rédation de l'article-->
+              <textarea name="corps_de_texte" rows="8" cols="30"></textarea>
+              <!--Insertion d'une image-->
+              <label for="img">Insérer une image</label>
+              <input type="file" name="image"/>
+              <!--Enregistrement du nouveau billet (envoie dans la db!)-->
+              <label for="save"></label>
+              <button type="submit" name="button">Enregistrer</button>
+          </fieldset>
+        </form>
+      </div>
+    </main>
   </body>
 </html>
