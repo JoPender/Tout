@@ -1,0 +1,16 @@
+
+<table class="generic-table colorful number">
+  <td>
+      <?php foreach ($plats as $plat) :?>
+        <?php foreach ($plat as $p => $value) :?>
+          <?php if ($p=='id'): ?>
+            <?php continue; ?>
+          <?php elseif($p == 'photo'): ?>
+            <tr><img src="<?= $wwwUrl.'/images/meals/'.$value; ?>" alt=""></tr>
+          <?php else :?>
+            <tr><?= $value; ?></tr>
+          <?php endif; ?>
+        <?php endforeach; ?>
+      <?php endforeach; ?>
+  </td>
+</table>

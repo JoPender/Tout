@@ -5,9 +5,9 @@ let  Pen = function()
   /*******EPAISSEUR********/
   this.thickness = '1px';
   this.mode = [
-    {largeur : 'fin', thick : '2px'},
-    {largeur : 'moyen', thick : '5px'},
-    {largeur : 'épais', thick : '10px'},
+    {largeur : 'fin', thick : '2'},
+    {largeur : 'moyen', thick : '5'},
+    {largeur : 'épais', thick : '10'},
   ];
   //this.thickness_button = [];
 
@@ -24,6 +24,7 @@ let  Pen = function()
   /*******COULEURS********/
   //récupération du parent 'colors'
   let pastille = document.querySelector('.colors')
+
 
   this.color = '#000';
   this.pins = [
