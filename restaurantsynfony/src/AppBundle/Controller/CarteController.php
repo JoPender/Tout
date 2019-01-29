@@ -184,10 +184,17 @@ class CarteController extends Controller
 
     public function basketAction()
     {
+      $em = $this->getDoctrine() -> getManager();
+      $rep = $em->getRepository('AppBundle:Carte');
 
+      $panier = [];
+
+      foreach ($_SESSION['basket'] as $plat_id => $quantite) {
+        $panier[] = $rep ->find($plat_id);
+      }
 
       return $this->render('carte/basket.html.twig', array(
-      'cartes'=>$_SESSION['basket']
+      'cartes'=> $panier
     ));
   }
 

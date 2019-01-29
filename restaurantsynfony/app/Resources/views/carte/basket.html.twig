@@ -2,21 +2,26 @@
 
 {% block body %}
     <table class="generic-table">
-      <caption><h1>Votre commande</h1></caption>
+      <caption><h1>Mon panier</h1></caption>
         <thead>
           <tr>
-              <th>Nom</th>
-              <th>Description</th>
-
+              <th></th>
+              <th></th>
+              <th>Tarif</th>
+              <th>Quantité</th>
+              <th>Total</th>
           </tr>
       </thead>
       <tbody>
-    {% for id,carte in cartes %}
-        <tr>
-            <td class="product_title">{{ id}}</td>
-            <td>{{ carte}}</td>
-        </tr>
-    {% endfor %}
+        {% for carte in cartes %}
+            <tr>
+                <td class="product_title">{{ carte.nom }}</td>
+                <td><img src="{{ asset('bundles/app/images/meals/'~carte.image)}}" alt="menu"></td>
+                <td><p style="width:2.5em;">{{ carte.prix }} €</p></td>
+                <td><input type="number" placeholder="1" step="1" min="0" max="10" class="button_numb"></td>
+                <td></td>
+            </tr>
+        {% endfor %}
     </tbody>
 </table>
 {% endblock %}
