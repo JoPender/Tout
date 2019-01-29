@@ -1,0 +1,48 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Carte</h1>
+
+    <table>
+        <tbody>
+            <tr>
+                <th>Id</th>
+                <td>{{ carte.id }}</td>
+            </tr>
+            <tr>
+                <th>Nom</th>
+                <td>{{ carte.nom }}</td>
+            </tr>
+            <tr>
+                <th>Description</th>
+                <td>{{ carte.description }}</td>
+            </tr>
+            <tr>
+                <th>Image</th>
+                <td>{{ carte.image }}</td>
+            </tr>
+            <tr>
+                <th>Prix</th>
+                <td>{{ carte.prix }}</td>
+            </tr>
+            <tr>
+                <th>Stock</th>
+                <td>{{ carte.stock }}</td>
+            </tr>
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('carte_index') }}">Back to the list</a>
+        </li>
+        <li>
+            <a href="{{ path('carte_edit', { 'id': carte.id }) }}">Edit</a>
+        </li>
+        <li>
+            {{ form_start(delete_form) }}
+                <input type="submit" value="Delete">
+            {{ form_end(delete_form) }}
+        </li>
+    </ul>
+{% endblock %}

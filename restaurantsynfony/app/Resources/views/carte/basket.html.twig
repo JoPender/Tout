@@ -1,0 +1,22 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <table class="generic-table">
+      <caption><h1>Votre commande</h1></caption>
+        <thead>
+          <tr>
+              <th>Nom</th>
+              <th>Description</th>
+
+          </tr>
+      </thead>
+      <tbody>
+    {% for id,carte in cartes %}
+        <tr>
+            <td class="product_title">{{ id}}</td>
+            <td>{{ carte}}</td>
+        </tr>
+    {% endfor %}
+    </tbody>
+</table>
+{% endblock %}

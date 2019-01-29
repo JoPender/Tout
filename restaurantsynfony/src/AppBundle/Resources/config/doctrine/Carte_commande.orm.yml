@@ -1,0 +1,20 @@
+AppBundle\Entity\Carte_commande:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\Carte_commandeRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        commandeId:
+            type: object
+            column: commande_id
+        carteId:
+            type: object
+            column: carte_id
+        quantite:
+            type: integer
+    lifecycleCallbacks: {  }

@@ -1,0 +1,44 @@
+carte_public_index:
+    path:     /
+    defaults: { _controller: "AppBundle:Carte:indexClient" }
+    methods:  GET
+
+carte_public_show:
+    path:     /{id}/show
+    defaults: { _controller: "AppBundle:Carte:showClient" }
+    methods:  GET
+
+carte_index:
+    path:     /admin
+    defaults: { _controller: "AppBundle:Carte:index" }
+    methods:  GET
+
+carte_show:
+    path:     /admin/{id}/show
+    defaults: { _controller: "AppBundle:Carte:show" }
+    methods:  GET
+
+carte_new:
+    path:     /admin/new
+    defaults: { _controller: "AppBundle:Carte:new" }
+    methods:  [GET, POST]
+
+carte_edit:
+    path:     /admin/{id}/edit
+    defaults: { _controller: "AppBundle:Carte:edit" }
+    methods:  [GET, POST]
+
+carte_delete:
+    path:     /admin/{id}/delete
+    defaults: { _controller: "AppBundle:Carte:delete" }
+    methods:  DELETE
+
+carte_addBasket:
+    path:     /add/{id}
+    defaults: { _controller: "AppBundle:Carte:addBasket" }
+    methods:  GET
+
+carte_basket:
+    path:     /basket
+    defaults: { _controller: "AppBundle:Carte:basket" }
+    methods:  GET

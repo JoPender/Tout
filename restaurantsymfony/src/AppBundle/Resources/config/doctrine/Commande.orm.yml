@@ -1,0 +1,25 @@
+AppBundle\Entity\Commande:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\CommandeRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+
+        montant:
+            type: float
+            nullable: true
+            unique: true
+    manyToOne:
+        userId:
+            targetEntity: User
+            joinColumn:
+                   name: user_id
+                   referencedColumnName: id
+                   nullable: false
+
+    lifecycleCallbacks: {  }

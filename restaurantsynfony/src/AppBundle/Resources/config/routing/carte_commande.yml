@@ -1,0 +1,34 @@
+carte_commande_public_index:
+    path:     /
+    defaults: { _controller: "AppBundle:Carte_commande:index" }
+    methods:  GET
+
+carte_commande_public_show:
+    path:     /{id}/show
+    defaults: { _controller: "AppBundle:Carte_commande:show" }
+    methods:  GET
+
+carte_commande_index:
+    path:     /admin
+    defaults: { _controller: "AppBundle:Carte_commande:index" }
+    methods:  GET
+
+carte_commande_show:
+    path:     /admin/{id}/show
+    defaults: { _controller: "AppBundle:Carte_commande:show" }
+    methods:  GET
+
+carte_commande_new:
+    path:     /admin/new
+    defaults: { _controller: "AppBundle:Carte_commande:new" }
+    methods:  [GET, POST]
+
+carte_commande_edit:
+    path:     /admin/{id}/edit
+    defaults: { _controller: "AppBundle:Carte_commande:edit" }
+    methods:  [GET, POST]
+
+carte_commande_delete:
+    path:     /admin/{id}/delete
+    defaults: { _controller: "AppBundle:Carte_commande:delete" }
+    methods:  DELETE

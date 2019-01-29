@@ -25,6 +25,23 @@
 
 <!-- En-tête commune -->
 <header>
+    <?php if($pseudo): ?>
+    <p><?= $pseudo; ?></p>
+    <a href="/developpement/restaurant/index.php/logout" class="button">Se déconnecter</a>
+    <?php else: ?>
+    <nav class="user-interface">
+      <ul class="link-list">
+        <li>
+        <a href="/developpement/restaurant/index.php/register" class="button">S'enregistrer</a>
+        </li>
+        <li>
+        <a href="/developpement/restaurant/index.php/login" class="button">connexion</a>
+        </li>
+        <!-- Code HTML/PHP à écrire -->
+      </ul>
+   </nav>
+   <?php endif; ?>
+
     <h1>
         <a href="<?= $requestUrl ?>">
             <img src="<?= $wwwUrl ?>/images/logo.gif" height="63" width="57" alt="3WA Restaurant">Restaurant - Made In America !
@@ -33,17 +50,7 @@
 </header>
 
 <!-- Interface utilisateur -->
-<nav class="user-interface">
-    <ul class="link-list">
-      <li>
-      <a href="/developpement/restaurant/index.php/user/register" class="button">Se connecter</a>
-      </li>
-      <li>
-      <a href="/developpement/restaurant/index.php/user/login" class="button">connexion</a>
-      </li>
-      <!-- Code HTML/PHP à écrire -->
-    </ul>
-</nav>
+
 
 <main>
     <!-- Affichage du template lié à la vue -->

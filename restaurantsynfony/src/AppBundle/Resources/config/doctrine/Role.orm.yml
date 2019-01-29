@@ -1,0 +1,15 @@
+AppBundle\Entity\Role:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\RoleRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nom:
+            type: string
+            length: 50
+    lifecycleCallbacks: {  }

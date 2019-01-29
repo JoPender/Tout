@@ -9,15 +9,14 @@ class UserSession
 			session_start();
 		}
 	}
-    public function create($userId, $firstName, $lastName, $email)
+    public function create($userId, $pseudo)
     {
         // Construction de la session utilisateur.
         $_SESSION['user'] =
         [
             'UserId'    => $userId,
-            'FirstName' => $firstName,
-            'LastName'  => $lastName,
-            'Email'     => $email
+            'Pseudo' => $pseudo,
+
         ];
     }
     public function destroy()
@@ -66,6 +65,20 @@ class UserSession
         }
         return $_SESSION['user']['UserId'];
     }
+
+		/**
+		 * Récupération du pseudo dans la session
+		 * @return [type] [description]
+		 */
+		public function getPseudo()
+    {
+        if($this->isAuthenticated() == false)
+        {
+            return null;
+        }
+        return $_SESSION['user']['Pseudo'];
+    }
+		
 	public function isAuthenticated()
 	{
 		if(array_key_exists('user', $_SESSION) == true)

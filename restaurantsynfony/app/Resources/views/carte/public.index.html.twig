@@ -1,0 +1,33 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+
+
+    <table class="generic-table">
+      <caption><h1>Carte</h1></caption>
+        <thead>
+            <tr>
+                <th>Nom</th>
+                <th>Description</th>
+                <th>Image</th>
+                <th>Prix</th>
+                <th>Quantité</th>
+                <th>Ajouter</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for carte in cartes %}
+            <tr>
+                <td class="product_title">{{ carte.nom }}</td>
+                <td>{{ carte.description }}</td>
+                <td><img src="{{ asset('bundles/app/images/meals/'~carte.image)}}" alt="menu"></td>
+                <td><p style="width:2.5em;">{{ carte.prix }} €</p></td>
+                <td><input type="number" placeholder="1" step="1" min="0" max="10" class="button_numb"></td>
+                <td><a href="{{ path('carte_addBasket', { 'id': carte.id })}}"><button type="submit" class="button">Ajouter</button></a>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+
+{% endblock %}

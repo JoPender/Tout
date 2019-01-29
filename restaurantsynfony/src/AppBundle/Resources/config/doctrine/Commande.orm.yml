@@ -1,0 +1,17 @@
+AppBundle\Entity\Commande:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\CommandeRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        userId:
+            type: object
+            column: user_id
+        montant:
+            type: float
+    lifecycleCallbacks: {  }

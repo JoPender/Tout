@@ -1,0 +1,19 @@
+app:
+    resource: '@AppBundle/Controller/'
+    type: annotation
+
+app_user:
+    resource: "@AppBundle/Resources/config/routing/user.yml"
+    prefix:   /user
+
+app_carte:
+    resource: "@AppBundle/Resources/config/routing/carte.yml"
+    prefix:   /carte
+
+app_category:
+    resource: "@AppBundle/Resources/config/routing/category.yml"
+    prefix:   /category
+
+app_role:
+    resource: "@AppBundle/Resources/config/routing/role.yml"
+    prefix:   /role

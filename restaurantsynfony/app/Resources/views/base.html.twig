@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+    <head>
+      {% block header %}
+        <meta charset="UTF-8" />
+        <title>{% block title %}3WA Restaurant{% endblock %}</title>
+
+            <meta charset="utf-8">
+            <meta http-equiv="X-UA-Compatible" content="IE=edge">
+
+            <link rel="stylesheet" href="{{ asset('bundles/app/css/normalize-3.0.3.min.css') }}">
+            <link rel="stylesheet" href="{{ asset('bundles/app/css/normalize-3.0.3.min.css') }}">
+            <link rel="stylesheet" href="{{ asset('bundles/app/css/font-awesome-4.3.0.min.css') }}">
+
+            <!-- Feuilles de styles de l'application -->
+            <link rel="stylesheet" href="{{ asset('bundles/app/css/3wa-resto.css') }}">
+            <link rel="stylesheet" href="{{ asset('bundles/app/css/ui-button.css') }}">
+            <link rel="stylesheet" href="{{ asset('bundles/app/css/ui-form.css') }}">
+            <link rel="stylesheet" href="{{ asset('bundles/app/css/ui-table.css') }}">
+            <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Oleo+Script+Swash+Caps|Karla">
+
+            <!-- Librairie jQuery -->
+            <script src="http://code.jquery.com/jquery-2.1.0.min.js"></script>
+
+            <!-- JavaScript de l'application -->
+            <script src="{{ asset('/js/utilities.js') }}"></script>
+
+
+        <link rel="icon" type="image/x-icon" href="{{ asset('favicon.ico') }}" />
+      {% endblock %}
+    </head>
+    <body>
+      <header>
+          <h1>
+            <a href=""{{ path('carte_index') }}""><img src="{{ asset('bundles/app/images/logo.gif') }}" height="63" width="57" alt="3WA Restaurant"></a>Restaurant - Made In America !
+          </h1>
+          <nav id="navHeader">
+            <ul class="container-flex clearfloat">
+              <a href="{{ path('about') }}">About</a>
+              <a href="{{ path('user_index') }}">Utilisateurs</a>
+              <a href="{{ path('role_index') }}">roles</a>
+              <div class="cart">
+                <a href="{{ path('carte_basket') }}"><i class="fa fa-shopping-cart"></i>Panier</a>
+              </div>
+            </ul>
+          </nav>
+    </header>
+
+    <main>
+    {% block body %}
+
+
+
+    {% endblock %}
+
+
+
+    <footer>
+    {% block footer %}
+        <ul class="link-list">
+            <li><img src="<?= $wwwUrl ?>/images/payment/visa.png" alt="Visa"></li>
+            <li><img src="<?= $wwwUrl ?>/images/payment/mastercard.png" alt="MasterCard"></li>
+            <li><img src="<?= $wwwUrl ?>/images/payment/paypal.png" alt="PayPal"></li>
+        </ul>
+        <small>Réalisé avec <i class="fa fa-heart"></i>&nbsp; par les élèves de la 3W Academy</small>
+    {% endblock %}
+    </main>
+    </footer>
+
+      {% block javascripts %}
+      <script src="<?= $wwwUrl ?>/js/main.js"></script>
+      {% endblock %}
+      </body>
+</html>

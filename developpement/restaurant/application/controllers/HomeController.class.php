@@ -4,10 +4,15 @@ class HomeController
 {
     public function httpGetMethod(Http $http, array $queryFields)
     {
+      $session = new UserSession();
       $message = new HomeModel();
       $boissons = $message -> findPlatInCategories('boisson');
 
-      return['categorie' => $boissons];
+
+      return[
+        'categorie' => $boissons,
+        'pseudo' => $session->getPseudo()
+      ];
     }
 
     public function display() {

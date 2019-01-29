@@ -1,0 +1,36 @@
+AppBundle\Entity\User:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\UserRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        username:
+            type: string
+            length: 255
+            unique: true
+        password:
+            type: string
+            length: 255
+            unique: true
+        mail:
+            type: string
+            length: 255
+            unique: true
+        adresse:
+            type: string
+            length: 255
+            nullable: true
+            unique: true
+    manyToOne:
+        role:
+            targetEntity: Role
+            joinColumn:
+                   name: role_id
+                   referencedColumnName: id
+                   nullable: false
+    lifecycleCallbacks: {  }

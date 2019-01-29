@@ -1,0 +1,4 @@
+app_carte:
+    resource: "@AppBundle/Resources/config/routing/carte.yml"
+    prefix:   /carte
+

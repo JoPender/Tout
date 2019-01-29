@@ -1,0 +1,39 @@
+{% extends 'base.html.twig' %}
+
+{% block body %}
+    <h1>Cartecommandes list</h1>
+
+    <table>
+        <thead>
+            <tr>
+                <th>Id</th>
+                <th>Quantite</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+        {% for cartecommande in cartecommandes %}
+            <tr>
+                <td><a href="{{ path('cartecommande_show', { 'id': cartecommande.id }) }}">{{ cartecommande.id }}</a></td>
+                <td>{{ cartecommande.quantite }}</td>
+                <td>
+                    <ul>
+                        <li>
+                            <a href="{{ path('cartecommande_show', { 'id': cartecommande.id }) }}">show</a>
+                        </li>
+                        <li>
+                            <a href="{{ path('cartecommande_edit', { 'id': cartecommande.id }) }}">edit</a>
+                        </li>
+                    </ul>
+                </td>
+            </tr>
+        {% endfor %}
+        </tbody>
+    </table>
+
+    <ul>
+        <li>
+            <a href="{{ path('cartecommande_new') }}">Create a new cartecommande</a>
+        </li>
+    </ul>
+{% endblock %}

@@ -1,0 +1,34 @@
+role_public_index:
+    path:     /
+    defaults: { _controller: "AppBundle:Role:index" }
+    methods:  GET
+
+role_public_show:
+    path:     /{id}/show
+    defaults: { _controller: "AppBundle:Role:show" }
+    methods:  GET
+
+role_index:
+    path:     /admin/
+    defaults: { _controller: "AppBundle:Role:index" }
+    methods:  GET
+
+role_show:
+    path:     /admin/{id}/show
+    defaults: { _controller: "AppBundle:Role:show" }
+    methods:  GET
+
+role_new:
+    path:     /admin/new
+    defaults: { _controller: "AppBundle:Role:new" }
+    methods:  [GET, POST]
+
+role_edit:
+    path:     /admin/{id}/edit
+    defaults: { _controller: "AppBundle:Role:edit" }
+    methods:  [GET, POST]
+
+role_delete:
+    path:     /admin/{id}/delete
+    defaults: { _controller: "AppBundle:Role:delete" }
+    methods:  DELETE

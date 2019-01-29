@@ -1,0 +1,41 @@
+AppBundle\Entity\Carte:
+    type: entity
+    table: null
+    repositoryClass: AppBundle\Repository\CarteRepository
+    id:
+        id:
+            type: integer
+            id: true
+            generator:
+                strategy: AUTO
+    fields:
+        nom:
+            type: string
+            length: 255
+            unique: true
+        description:
+            type: text
+            nullable: true
+
+        image:
+            type: string
+            length: 255
+            nullable: true
+            unique: true
+        prix:
+            type: float
+            nullable: true
+            unique: true
+        stock:
+            type: integer
+            nullable: true
+            unique: true
+    manyToOne:
+        categorie:
+            targetEntity: Category
+            joinColumn:
+                 name: category_id
+                 referencedColumnName: id
+                 nullable: false
+
+    lifecycleCallbacks: {  }
